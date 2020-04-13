@@ -3,7 +3,7 @@ Entry to the gamejam LudumDare 46 edition
 
 # Dev Dependencies
 
-You will need to install Unity to build this project.
+You will need to install Unity (v2019.3.9f1) to build this project.
 This project uses WSL to enable bash scripting but doesn't have a hard dependency on it.
 See https://docs.microsoft.com/en-us/windows/wsl/install-win10 (WSL can be installed from the microsoft store)
 
