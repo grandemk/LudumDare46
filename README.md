@@ -12,3 +12,7 @@ See https://docs.microsoft.com/en-us/windows/wsl/install-win10 (WSL can be insta
 
 If you do not have git / git lfs installed, use the `setup.sh` script to get the
 necessary dependencies and to make sure all assets were retrieved.
+
+# Build
+
+Build using the unity editor or using scripts/webgl.sh
