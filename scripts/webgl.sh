@@ -9,6 +9,6 @@ if [ "$1" == "" ] ; then
 fi
 
 echo "[webgl] Started Unity Build $(date)"
-"$unity_exe" -batchmode --projectPath=$(pwd) -executeMethod WebGLBuilder.build -quit
+"$unity_exe" -batchmode -nographics --projectPath=$(pwd) -executeMethod WebGLBuilder.build -quit
 echo "[webgl] Ended Unity Build $(date)"
 
