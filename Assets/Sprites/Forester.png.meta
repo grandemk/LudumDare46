@@ -5,6 +5,129 @@ TextureImporter:
   - first:
       213: 3000610128921524152
     second: Forester_0
+  - first:
+      213: 3050735885511609123
+    second: Forester_1
+  - first:
+      213: 1533586821231823497
+    second: Forester_0
+  - first:
+      213: 5436752627086838680
+    second: Forester_1
+  - first:
+      213: 8045547165002390227
+    second: Forester_2
+  - first:
+      213: 1462368870814889430
+    second: Forester_3
+  - first:
+      213: 7757880279208610380
+    second: Forester_4
+  - first:
+      213: -134829265384287681
+    second: Forester_5
+  - first:
+      213: -8243939430418435955
+    second: Forester_6
+  - first:
+      213: 640344430446405692
+    second: Forester_7
+  - first:
+      213: 7428717754865254352
+    second: Forester_8
+  - first:
+      213: 3964141668535898846
+    second: Forester_9
+  - first:
+      213: -9156060174570269106
+    second: Forester_10
+  - first:
+      213: -7878007506481922924
+    second: Forester_11
+  - first:
+      213: -6034909020447811386
+    second: Forester_12
+  - first:
+      213: -555369106690441091
+    second: Forester_13
+  - first:
+      213: 3282549386199717338
+    second: Forester_14
+  - first:
+      213: 4615789495372864538
+    second: Forester_15
+  - first:
+      213: 2350569566058985147
+    second: Forester_16
+  - first:
+      213: -840450663771462968
+    second: Forester_17
+  - first:
+      213: 6581816073203645451
+    second: Forester_18
+  - first:
+      213: 9088999170311686930
+    second: Forester_19
+  - first:
+      213: 3544488108368952941
+    second: Forester_20
+  - first:
+      213: 8054985461103885303
+    second: Forester_21
+  - first:
+      213: -8420046367680629476
+    second: Forester_22
+  - first:
+      213: 4249795025534575800
+    second: Forester_23
+  - first:
+      213: -5141252553598515611
+    second: Forester_24
+  - first:
+      213: -8180894940884093564
+    second: Forester_25
+  - first:
+      213: -7872270204343395870
+    second: Forester_26
+  - first:
+      213: 4963179699016429215
+    second: Forester_27
+  - first:
+      213: -6771516538916144168
+    second: Forester_28
+  - first:
+      213: -1741847781926029602
+    second: Forester_29
+  - first:
+      213: 1035517841489258575
+    second: Forester_30
+  - first:
+      213: -9116539644924299819
+    second: Forester_31
+  - first:
+      213: -2866706013591825619
+    second: Forester_32
+  - first:
+      213: 42795160756410323
+    second: Forester_33
+  - first:
+      213: 6721301588438406863
+    second: Forester_34
+  - first:
+      213: 1423379426652057740
+    second: Forester_35
+  - first:
+      213: 2863752349309837494
+    second: Forester_36
+  - first:
+      213: -4265510631906288129
+    second: Forester_37
+  - first:
+      213: -4334848692757745823
+    second: Forester_38
+  - first:
+      213: 3746075852370074986
+    second: Forester_39
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +173,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -67,9 +190,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -79,9 +202,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -91,9 +214,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -107,8 +230,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 7
-        height: 14
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,8 +239,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b77ecba30f44a920800000000000000
-      internalID: 3000610128921524152
+      spriteID: 98a4ebfa615684510800000000000000
+      internalID: 1533586821231823497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forester_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bce2d85b9337b40800000000000000
+      internalID: 5436752627086838680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forester_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da5e99f48687af60800000000000000
+      internalID: 8045547165002390227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forester_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5b2837db06b4410800000000000000
+      internalID: 1462368870814889430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forester_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4acc3cc20789ab60800000000000000
+      internalID: 7757880279208610380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forester_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32517b5f7df02ef0800000000000000
+      internalID: -134829265384287681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forester_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80b21c24c4a79d80800000000000000
+      internalID: -8243939430418435955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forester_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3868a6edd5f2e800800000000000000
+      internalID: 640344430446405692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forester_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df7163607b181760800000000000000
+      internalID: 7428717754865254352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forester_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2186838d5730730800000000000000
+      internalID: 3964141668535898846
       vertices: []
       indices: 
       edges: []
@@ -125,7 +437,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6022202a30f9dcb2286ffce477a14fab
+    spriteID: ba53825558bad6124a3b622f18d7add9
     internalID: 0
     vertices: []
     indices: 

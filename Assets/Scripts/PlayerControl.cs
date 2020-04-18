@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 5f;
-    // Start is called before the first frame update
+    private float speed = 4.5f;
+    private Animator animator = null;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,5 +19,11 @@ public class PlayerControl : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(horizontalInput, verticalInput, 0);
         transform.Translate(Time.deltaTime * speed * direction);
+
+        float move = horizontalInput;
+        if(move <= 0.01f && move >= -0.01f)
+          move = verticalInput;
+          
+        animator.SetFloat("moving", move);
     }
 }
