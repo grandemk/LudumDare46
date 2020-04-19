@@ -52,6 +52,8 @@ public class Kid : MonoBehaviour
         int numFlowers = shop.flowerPos.Count;
         target = GetTarget();
         float move = 0f;
+        if (numFlowers > 70)
+            speed = 5f;
         if(target >= 0)
         {
             Vector3 direction = GetFlowerCoord(target) - transform.position;

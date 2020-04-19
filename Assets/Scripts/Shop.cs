@@ -21,6 +21,8 @@ public class Shop: MonoBehaviour
     public AudioClip deathClip = null;
     public List<AudioClip> shotClip = null;
     public AudioClip gardenClip = null;
+    public PlayerAnnouncement announcement;
+    bool win = false;
 
     public List<Vector3> flowerPos = new List<Vector3>();
 
@@ -35,7 +37,7 @@ public class Shop: MonoBehaviour
             }
         }
     }
-    
+
     void Start()
     {
         moneyText = GameObject.Find("Money").GetComponent<Text>();
@@ -44,12 +46,23 @@ public class Shop: MonoBehaviour
         FindFlowers();
     }
 
+    public int GetNumFlowers()
+    {
+        return flowerPos.Count;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        moneyText.text = "money: " + money.ToString() + "p";
+        int numFlowers = flowerPos.Count;
+        if (numFlowers >= 100 && win == false)
+        {
+            win = true;
+            announcement.ShowFor("You Win !", "success", 5f);
+        }
+        moneyText.text = "Money: " + money.ToString() + "p / 150p";
         flowerText.text = "Place Flower (" + flowerPrice.ToString() + "p)";
-        flowerNumText.text = "Your garden contains " + flowerPos.Count + " flowers";
+        flowerNumText.text = "Your garden contains " + numFlowers + " flowers";
         if(money < flowerPrice)
           flowerText.color = Color.red;
         else
@@ -120,7 +133,8 @@ public class Shop: MonoBehaviour
 
     public void RacketedKid()
     {
-        money += 5;
+        if(money < 150)
+            money += 5;
         for (int i = 0; i < audioSrcDeath.Count; ++i)
         {
             if (audioSrcDeath[i].isPlaying == false)

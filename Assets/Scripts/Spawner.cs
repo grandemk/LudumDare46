@@ -54,7 +54,8 @@ public class Spawner : MonoBehaviour
     {
         while(true)
         {
-            var maxSimultaneousSpawn = 10;
+            var numFlowers = shop.GetNumFlowers();
+            var maxSimultaneousSpawn = 10 + (numFlowers * numFlowers) / 50;
             var numSimultaneousSpawn = spawnContainer.transform.childCount;
             if(numSimultaneousSpawn < maxSimultaneousSpawn)
             {
@@ -66,6 +67,8 @@ public class Spawner : MonoBehaviour
 
 
             var spawnIntervalDelay = 1f;
+            if (numFlowers > 70)
+                spawnIntervalDelay = 0.5f;
             yield return new WaitForSeconds(spawnIntervalDelay);
         }
     }
