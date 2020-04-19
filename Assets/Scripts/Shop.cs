@@ -16,6 +16,10 @@ public class Shop: MonoBehaviour
     public Tile flowerTile;
     bool buyMode = false;
     public GameObject killZonePrefab = null;
+    public List<AudioSource> audioSrcShot = null;
+    public List<AudioSource> audioSrcDeath = null;
+    public AudioClip deathClip = null;
+    public List<AudioClip> shotClip = null;
 
     public List<Vector3> flowerPos = new List<Vector3>();
 
@@ -87,6 +91,16 @@ public class Shop: MonoBehaviour
                 var worldPos = Camera.main.ScreenToWorldPoint(mousePos);
                 var obj = Instantiate(killZonePrefab);
                 obj.transform.position = new Vector3(worldPos.x, worldPos.y, 0);
+                var shotIdx = Random.Range(0, shotClip.Count);
+                for (int i = 0; i < audioSrcShot.Count; ++i)
+                {
+                    if(audioSrcShot[i].isPlaying == false)
+                    {
+                        audioSrcShot[i].clip = shotClip[shotIdx];
+                        audioSrcShot[i].Play();
+                        break;
+                    }
+                }
             }
             
 
@@ -96,6 +110,16 @@ public class Shop: MonoBehaviour
     public void RacketedKid()
     {
         money += 5;
+        for (int i = 0; i < audioSrcDeath.Count; ++i)
+        {
+            if (audioSrcDeath[i].isPlaying == false)
+            {
+                audioSrcDeath[0].clip = deathClip;
+                audioSrcDeath[0].volume = 0.1f;
+                audioSrcDeath[0].Play();
+                break;
+            }
+        }
     }
 
     public void BuyFlower()
