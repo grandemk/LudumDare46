@@ -20,6 +20,7 @@ public class Shop: MonoBehaviour
     public List<AudioSource> audioSrcDeath = null;
     public AudioClip deathClip = null;
     public List<AudioClip> shotClip = null;
+    public AudioClip gardenClip = null;
 
     public List<Vector3> flowerPos = new List<Vector3>();
 
@@ -79,6 +80,16 @@ public class Shop: MonoBehaviour
                         Debug.Log("Changed Tile at mouse:" + mousePos.ToString() + ", world: " + worldPos.ToString() + "grid: " + cellPos.ToString());
                         flowerPos.Add(tilemap.CellToWorld(cellPos));
                         money -= flowerPrice;
+
+                        for (int i = 0; i < audioSrcShot.Count; ++i)
+                        {
+                            if (audioSrcShot[i].isPlaying == false)
+                            {
+                                audioSrcShot[i].clip = gardenClip;
+                                audioSrcShot[i].Play();
+                                break;
+                            }
+                        }
                     }
                 }
             }

@@ -810,6 +810,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 840962a6b76efbd45bce5158ef1c3628, type: 3}
   - {fileID: 8300000, guid: cbef29f5386a17049b877fe3e96fd6b4, type: 3}
   - {fileID: 8300000, guid: 00665d8cc34d0bc43b81d84f9df70a93, type: 3}
+  gardenClip: {fileID: 8300000, guid: 074ce42993734ef4f9f2df387b41c9ae, type: 3}
   flowerPos: []
 --- !u!82 &1417363350
 AudioSource:
