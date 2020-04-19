@@ -64,7 +64,7 @@ public class Shop: MonoBehaviour
         {
             if(money >= flowerPrice)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButton(0))
                 {
                     var mousePos = Input.mousePosition;
                     var worldPos = Camera.main.ScreenToWorldPoint(mousePos);
