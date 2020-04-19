@@ -61,7 +61,9 @@ public class Spawner : MonoBehaviour
                 int spawnNum = ChooseSpawnNumber();
                 for(int i = 0; i < spawnNum; ++i)
                     SpawnKid();
+                Debug.Log("spawned " + spawnNum.ToString() + " Kid");
             }
+
 
             var spawnIntervalDelay = 1f;
             yield return new WaitForSeconds(spawnIntervalDelay);
