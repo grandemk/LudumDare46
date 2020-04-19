@@ -42,7 +42,7 @@ public class Shop: MonoBehaviour
     void Update()
     {
         moneyText.text = "money: " + money.ToString() + "p";
-        flowerText.text = "Buy Flower (" + flowerPrice.ToString() + "p)";
+        flowerText.text = "Place Flower (" + flowerPrice.ToString() + "p)";
         flowerNumText.text = "Your garden contains " + flowerPos.Count + " flowers";
         if(money < flowerPrice)
           flowerText.color = Color.red;

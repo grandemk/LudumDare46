@@ -640,7 +640,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Buy Flower
+  m_Text: Place Flower (10p)
 --- !u!222 &1136974891
 CanvasRenderer:
   m_ObjectHideFlags: 0
