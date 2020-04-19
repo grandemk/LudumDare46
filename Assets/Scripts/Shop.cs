@@ -57,9 +57,11 @@ public class Shop: MonoBehaviour
                 worldPos.z = 0;
                 var tilePos = tileGrid.WorldToCell(worldPos);
                 Debug.Log("Changed Tile at mouse:" + mousePos.ToString() + ", world: " + worldPos.ToString() + "grid: " + tilePos.ToString());
-                ChangeTileTexture(tilePos);
-                flowerPos.Add(worldPos);
-                money -= flowerPrice;
+                if(ChangeTileTexture(tilePos))
+                {
+                    flowerPos.Add(worldPos);
+                    money -= flowerPrice;
+                }
             }
         }
     }
@@ -69,8 +71,12 @@ public class Shop: MonoBehaviour
         buyMode = true;
     }
 
-    void ChangeTileTexture(Vector3Int tileCoord)
+    bool ChangeTileTexture(Vector3Int tileCoord)
     {
+        if (tilemap.GetTile(tileCoord) == flowerTile)
+          return false;
+
         tilemap.SetTile(tileCoord, flowerTile);
+        return true;
     }
 }
