@@ -66,11 +66,12 @@ public class Kid : MonoBehaviour
 
         animator.SetFloat("kid_moving", move);
     }
-    void OnCollisionEnter2D(Collision2D coll)
+    IEnumerator DestroyGardenCoroutine(ContactPoint2D[] contacts)
     {
+        yield return new WaitForSeconds(2);
         var tilemap = shop.tilemap;
         Vector3 hitPosition = Vector3.zero;
-        foreach(ContactPoint2D hit in coll.contacts)
+        foreach(ContactPoint2D hit in contacts)
         {
             hitPosition.x = hit.point.x - 0.01f * hit.normal.x;
             hitPosition.y = hit.point.y - 0.01f * hit.normal.y;
@@ -86,5 +87,9 @@ public class Kid : MonoBehaviour
                 }
             }
         }
+    }
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        StartCoroutine(DestroyGardenCoroutine(coll.contacts));
     }
 }

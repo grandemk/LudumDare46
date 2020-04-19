@@ -46,19 +46,29 @@ public class Shop: MonoBehaviour
         flowerNumText.text = "Your garden contains " + flowerPos.Count + " flowers";
         if(money < flowerPrice)
           flowerText.color = Color.red;
-        if(buyMode == true && money >= flowerPrice)
+        else
+          flowerText.color = Color.black;
+        if(buyMode == true)
         {
-            if(Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(1))
             {
-                var mousePos = Input.mousePosition;
-                var worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-                worldPos.z = 0;
-                var tilePos = tilemap.WorldToCell(worldPos);
-                Debug.Log("Changed Tile at mouse:" + mousePos.ToString() + ", world: " + worldPos.ToString() + "grid: " + tilePos.ToString());
-                if(ChangeTileTexture(tilePos))
+                buyMode = false;
+            }
+
+            if(money >= flowerPrice)
+            {
+                if (Input.GetMouseButtonDown(0))
                 {
-                    flowerPos.Add(tilemap.CellToWorld(tilePos));
-                    money -= flowerPrice;
+                    var mousePos = Input.mousePosition;
+                    var worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+                    worldPos.z = 0;
+                    var cellPos = tilemap.WorldToCell(worldPos);
+                    if (ChangeTileTexture(cellPos))
+                    {
+                        Debug.Log("Changed Tile at mouse:" + mousePos.ToString() + ", world: " + worldPos.ToString() + "grid: " + cellPos.ToString());
+                        flowerPos.Add(tilemap.CellToWorld(cellPos));
+                        money -= flowerPrice;
+                    }
                 }
             }
         }
@@ -66,7 +76,7 @@ public class Shop: MonoBehaviour
 
     public void RacketedKid()
     {
-        money += 40;
+        money += 5;
     }
 
     public void BuyFlower()
