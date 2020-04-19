@@ -51,15 +51,14 @@ public class Shop: MonoBehaviour
         {
             if(Input.GetMouseButtonDown(0))
             {
-                var tileGrid = tilemap.layoutGrid;
                 var mousePos = Input.mousePosition;
                 var worldPos = Camera.main.ScreenToWorldPoint(mousePos);
                 worldPos.z = 0;
-                var tilePos = tileGrid.WorldToCell(worldPos);
+                var tilePos = tilemap.WorldToCell(worldPos);
                 Debug.Log("Changed Tile at mouse:" + mousePos.ToString() + ", world: " + worldPos.ToString() + "grid: " + tilePos.ToString());
                 if(ChangeTileTexture(tilePos))
                 {
-                    flowerPos.Add(worldPos);
+                    flowerPos.Add(tilemap.CellToWorld(tilePos));
                     money -= flowerPrice;
                 }
             }
