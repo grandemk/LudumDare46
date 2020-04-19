@@ -15,6 +15,7 @@ public class Shop: MonoBehaviour
     public Tilemap tilemap;
     public Tile flowerTile;
     bool buyMode = false;
+    public GameObject killZonePrefab = null;
 
     public List<Vector3> flowerPos = new List<Vector3>();
 
@@ -48,13 +49,19 @@ public class Shop: MonoBehaviour
           flowerText.color = Color.red;
         else
           flowerText.color = Color.black;
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            buyMode = false;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            buyMode = true;
+        }
+
         if(buyMode == true)
         {
-            if (Input.GetMouseButtonDown(1))
-            {
-                buyMode = false;
-            }
-
             if(money >= flowerPrice)
             {
                 if (Input.GetMouseButtonDown(0))
@@ -71,6 +78,18 @@ public class Shop: MonoBehaviour
                     }
                 }
             }
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                var mousePos = Input.mousePosition;
+                var worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+                var obj = Instantiate(killZonePrefab);
+                obj.transform.position = new Vector3(worldPos.x, worldPos.y, 0);
+            }
+            
+
         }
     }
 
