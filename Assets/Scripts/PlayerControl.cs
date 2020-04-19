@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     private float speed = 4.5f;
     private Animator animator = null;
+    public Shop shop = null;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -25,5 +26,15 @@ public class PlayerControl : MonoBehaviour
           move = verticalInput;
           
         animator.SetFloat("moving", move);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Kid")
+        {
+            Debug.Log("Catched Kid");
+            Destroy(other.gameObject);
+            shop.RacketedKid();
+        }
     }
 }

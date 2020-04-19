@@ -65,6 +65,11 @@ public class Shop: MonoBehaviour
         }
     }
 
+    public void RacketedKid()
+    {
+        money += 40;
+    }
+
     public void BuyFlower()
     {
         buyMode = true;
