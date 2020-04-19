@@ -31,6 +31,8 @@ public class Kid : MonoBehaviour
 
     void Start()
     {
+        // Fix prefab bug
+        shop = GameObject.Find("Panel").GetComponent<Shop>();
         animator = GetComponent<Animator>();
         int numFlowers = shop.flowerPos.Count;
     }

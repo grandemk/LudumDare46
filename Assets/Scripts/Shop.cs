@@ -16,7 +16,6 @@ public class Shop: MonoBehaviour
     public Tile flowerTile;
     bool buyMode = false;
 
-
     public List<Vector3> flowerPos = new List<Vector3>();
 
     void FindFlowers()
