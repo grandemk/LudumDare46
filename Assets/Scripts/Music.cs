@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Music : MonoBehaviour
 {
-    private static Music _instance;
-    private int musicLength = 1;
-    private int musicStart = 0;
-
     public static Music instance
     {
         get
@@ -41,35 +37,36 @@ public class Music : MonoBehaviour
         }
     }
 
-    public AudioSource adSource;
-    public AudioClip[] adClips;
+    private static Music _instance;
+    private double nextEventTime;
 
-    IEnumerator playAudioSequentially()
-    {
-        yield return null;
-
-        while(true)
-        {
-            for (int i = musicStart; i < musicLength; ++i)
-            {
-                adSource.clip = adClips[i];
-                adSource.Play();
-                while (adSource.isPlaying)
-                {
-                    yield return null;
-                }
-            }
-        }
-    }
+    public AudioClip[] clips = new AudioClip[2];
+    public AudioSource[] audioSources = new AudioSource[2];
+    private int flip = 0;
+    private int minClip = 0;
+    private int curClip = 0;
+    private int maxClip = 1;
 
     void Start()
     {
-        StartCoroutine(playAudioSequentially());
+        nextEventTime = AudioSettings.dspTime;
+    }
+
+    void Update()
+    {
+        double time = AudioSettings.dspTime;
+        if(time + 1.0f > nextEventTime)
+        {
+            audioSources[flip].clip = clips[minClip + curClip];
+            audioSources[flip].PlayScheduled(nextEventTime);
+            nextEventTime += audioSources[flip].clip.length;
+            flip = 1 - flip;
+            curClip = (curClip + 1) % maxClip;
+        }
     }
 
     public void StartGame()
     {
-        musicStart = 1;
-        musicLength = adClips.Length;
+        minClip = 1;
     }
 }
